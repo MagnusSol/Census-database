@@ -1,12 +1,11 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const bcrypt = require('bcrypt');
 
-const Admin = sequelize.define('admin', {
+const Admin = sequelize.define('Admin', {
   username: {
     type: DataTypes.STRING,
-    unique: true,
-    allowNull: false
+    allowNull: false,
+    unique: true
   },
   password: {
     type: DataTypes.STRING,
@@ -14,4 +13,4 @@ const Admin = sequelize.define('admin', {
   }
 });
 
-module.exports = Admin;
+module.exports = { Admin };
