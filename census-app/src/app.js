@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/participants', participantRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.DB_PORT;
 
 async function initializeApp() {
   try {
