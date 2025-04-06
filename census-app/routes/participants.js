@@ -3,7 +3,7 @@ const router = express.Router();
 const authMiddleware = require('../middleware/auth');
 const participantController = require('../controllers/participantController');
 
-// Apply auth middleware to all routes
+// auth middleware to routes
 router.use(authMiddleware);
 
 // CRUD routes
